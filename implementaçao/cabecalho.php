@@ -12,14 +12,5 @@
     <li><a href="">Headsets     </a> </li>
     <li><a href="">Cadeiras     </a> </li>
     <li><a href="">Mousepads    </a> </li>
-
-    <li><div class="menu__usuario">
-        <button class="dropbtn"><img src="./Img/usuario.svg" /></button>
-        <div class="menu__usuario-conteudo">
-            <a href="#">Meu Perfil       </a>
-            <a href="">Gerir Produtos    </a>
-            <a href="">Gerar Relatório   </a>
-            <a href="">Logout            </a>
-        </div>
-    </div></li>
+    <li><a href="login.php">Iniciar Sessão    </a> </li>
 </ul>
