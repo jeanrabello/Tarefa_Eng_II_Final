@@ -8,7 +8,7 @@
         }
 
         public function gerarRelatorio(){
-            echo "<script>alert('Foram vendidos 320 Produtos');</script>";
+            echo "Foram vendidos 320 Produtos";
         }
 
         public function gerirProdutos(){

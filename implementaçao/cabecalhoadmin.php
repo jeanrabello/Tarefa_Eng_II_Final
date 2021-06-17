@@ -10,13 +10,13 @@
 </div>
 
 <ul class="cabecalho__menu">
-
+    <li><a href="indexlogado.php">Plataforma </a> </li>
     <li>
         <div class="menu__usuario">
             <button class="dropbtn"><img src="./Img/usuario.svg" /></button>
             <div class="menu__usuario-conteudo">
-                <a href="#">Meu Perfil       </a>
-                <a href="">Gerir Produtos    </a>
+                <a href="">Meu Perfil       </a>
+                <a href="gerirprodutos.php">Gerir Produtos    </a>
                 <a href="" onclick="relatorio()">Gerar Relatório   </a>
                 <script>
                     function relatorio() {
