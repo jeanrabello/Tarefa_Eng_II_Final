@@ -20,5 +20,5 @@ Para executar o código se faz necessário o uso do programa **XAMPP**.
     ![URL](https://github.com/jeanrabello/Tarefa_Eng_II_Final/blob/main/implementaçao/Img/IMG_README/localhost.png)
 
 **5º passo:**
-    Por fim, selecione a pasta **"implementaçao"**.
+    Por fim, selecione a pasta **"implementaçao"**.             
     ![Index](https://github.com/jeanrabello/Tarefa_Eng_II_Final/blob/main/implementaçao/Img/IMG_README/index.png)
