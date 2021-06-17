@@ -15,6 +15,22 @@
     $produtos[1] = $produto_2 -> getInfo();
     $produtos[2] = $produto_3 -> getInfo();
 
+    //adicionar
+    if (isset($_POST['adicionar'])) {
+        $x = count($produtos);
+
+        $cod = $_POST['cod'];
+        $nome = $_POST['nome'];
+        $quantidade = $_POST['quantidade'];
+        $valor = $_POST['valor'];
+        $tipo = $_POST['tipo'];
+
+        $produto_novo = new Produto($cod, $nome, $quantidade, $valor, $tipo);
+        $produto_novo -> gerarInfo();
+
+        $produtos[$x] = $produto_novo -> getInfo();
+    }
+
     //deletar
     if (isset($_POST['excluir'])) {
         
@@ -84,31 +100,7 @@
                             $x += 1;
                         }
 
-                        //adicionar
-                        if (isset($_POST['adicionar'])) {
-
-                            $cod = $_POST['cod'];
-                            $nome = $_POST['nome'];
-                            $quantidade = $_POST['quantidade'];
-                            $valor = $_POST['valor'];
-                            $tipo = $_POST['tipo'];
-
-                            $produto_4 = new Produto($cod, $nome, $quantidade, $valor, $tipo);
-                            $produto_4 -> gerarInfo();
-
-                            $produtos[3] = $produto_4 -> getInfo();
-                    ?>
-                            <tr>
-                                <td><form method="POST"><button type="submit" value="alterar" name="alterar">Alterar<input type="hidden" value="<?php echo $produtos[3]['cod']; ?>" name="cod"></form></td>
-                                <td><?php echo $produtos[3]['cod']; ?></td>
-                                <td><?php echo $produtos[3]['nome']; ?></td>
-                                <td><?php echo $produtos[3]['quantidade']; ?></td>
-                                <td><?php echo "R$".$produtos[3]['valor']; ?></td>
-                                <td><?php echo $produtos[3]['tipo']; ?></td>
-                                <td><form method="POST" action="<?php echo $_SERVER["PHP_SELF"] ?>"><button type="submit" value="excluir" name="excluir">Excluir<input type="hidden" value="<?php echo $produtos[3]['cod'] . "," . 3; ?>" name="cod"></form></td>
-                            </tr>
-                    <?php  
-                        }
+                        
                     ?>
 
                 </table>
