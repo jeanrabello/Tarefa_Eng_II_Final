@@ -12,7 +12,7 @@
             session_start();
             $_SESSION['usuarioAdmin'] = serialize($user);
             
-            header('Location: indexlogado.php');
+            header('Location: indexlogadoadm.php');
         }
         else if(($user->autenticarUsuario($_POST['email'], $_POST['senha'])) == 'usuarioComum'){
             $user = new UsuarioComum($_POST['email'], $_POST['senha']);

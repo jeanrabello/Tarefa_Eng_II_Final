@@ -16,7 +16,8 @@
     $produtos[2] = $produto_3 -> getInfo();
 
     //adicionar
-    if (isset($_POST['adicionar'])) {
+    if (isset($_POST['adicionar'])) 
+    {
         $x = count($produtos);
 
         $cod = $_POST['cod'];
@@ -29,11 +30,30 @@
         $produto_novo -> gerarInfo();
 
         $produtos[$x] = $produto_novo -> getInfo();
+
+    }
+
+    //alterar
+    if (isset($_POST['alterar'])) 
+    {
+        $x = $_POST['x'];
+
+        $cod = $_POST['cod'];
+        $nome = $_POST['nome'];
+        $quantidade = $_POST['quantidade'];
+        $valor = $_POST['valor'];
+        $tipo = $_POST['tipo'];
+
+        $produto_novo = new Produto($cod, $nome, $quantidade, $valor, $tipo);
+        $produto_novo -> gerarInfo();
+
+        $produtos[$x] = $produto_novo -> getInfo();
+
     }
 
     //deletar
-    if (isset($_POST['excluir'])) {
-        
+    if (isset($_POST['excluir'])) 
+    { 
         $cod = $_POST['cod'];
         $dados = explode(",", $cod);
 ?>
@@ -41,8 +61,7 @@
             var cod = "<?php echo $dados[0]; ?>"
             alert('Produto de cod: '+ cod +' foi excluído com sucesso');
         </script>
-<?php
-        
+<?php  
     }
 
 ?>
@@ -69,7 +88,8 @@
             </div>
 
             <div class="gerir">
-                <table class="tabela">
+                <table class="tabela"><br>
+                    <h1 style="margin-left: 40%;">Painel de Controle</h1>
                     <tr>
                         <th> Atualizar </th>
                         <th> Cod </th>
@@ -88,7 +108,7 @@
                         {
                     ?>
                             <tr>
-                                <td><form method="POST"><button type="submit" value="alterar" name="alterar">Alterar<input type="hidden" value="<?php echo $produtos[$x]['cod']; ?>" name="cod"></form></td>
+                                <td><form method="POST" action="alterar.php"><button type="submit" value="alterar" name="alterar">Alterar<input type="hidden" value="<?php echo $produtos[$x]['cod']; ?>" name="cod"><input type="hidden" value="<?php echo $produtos[$x]['nome']; ?>" name="nome"><input type="hidden" value="<?php echo $produtos[$x]['quantidade']; ?>" name="quantidade"><input type="hidden" value="<?php echo $produtos[$x]['valor']; ?>" name="valor"><input type="hidden" value="<?php echo $produtos[$x]['tipo']; ?>" name="tipo"><input type="hidden" value="<?php echo $x; ?>" name="x"></form></td>
                                 <td><?php echo $produtos[$x]['cod']; ?></td>
                                 <td><?php echo $produtos[$x]['nome']; ?></td>
                                 <td><?php echo $produtos[$x]['quantidade']; ?></td>

@@ -1,6 +1,12 @@
 <?php
     require_once 'produto_class.php';
 
+    $x = $_POST['x'];
+    $cod = $_POST['cod'];
+    $nome = $_POST['nome'];
+    $quantidade = $_POST['quantidade'];
+    $valor = $_POST['valor'];
+    $tipo = $_POST['tipo'];
 ?>
 
 <!DOCTYPE html>
@@ -26,22 +32,23 @@
 
             <div class="esquerda__login" style="margin-left: 26%;">
                 <form method="post" action="gerirprodutos.php">
-                    <h1>Inserir Produtos</h1><br>
+                    <h1>Atualizar Produtos</h1><br>
+                    <input type="hidden" value="<?php echo $x; ?>" name="x">
                     <label for="cod">Código:</label><br>
-                    <input type="number" id="cod" name="cod" placeholder="00001"><br><br>
+                    <input type="number" id="cod" name="cod" value="<?php echo $cod; ?>" placeholder="00001"><br><br>
                     <label for="nome">Nome:</label><br>
-                    <input type="text" id="nome" name="nome" placeholder="Fallen Speed"><br><br>
+                    <input type="text" id="nome" name="nome" value="<?php echo $nome; ?>" placeholder="Fallen Speed"><br><br>
                     <label for="quantidade" style="margin-left: 5%;">Quantidade:</label><br>
-                    <input type="number" id="quantidade" name="quantidade" placeholder="20"><br><br>
+                    <input type="number" id="quantidade" name="quantidade" value="<?php echo $quantidade; ?>" placeholder="20"><br><br>
                     <label for="valor">Valor:</label><br>
-                    <input type="number" id="valor" name="valor" placeholder="200.00"><br><br>
+                    <input type="number" id="valor" name="valor" value="<?php echo $valor; ?>" placeholder="200.00"><br><br>
                     <label for="tipo">Tipo:</label><br>
-                    <input type="text" id="tipo" name="tipo" placeholder="Mouse"><br><br>
-                    <input type="submit" name="adicionar" value="Adicionar" onclick="confirmacaoAdd()"><br><br>
+                    <input type="text" id="tipo" name="tipo" value="<?php echo $tipo; ?>" placeholder="Mouse"><br><br>
+                    <input type="submit" name="alterar" value="Alterar" onclick="confirmacaoAlt()"><br><br>
                     <script>
-                        function confirmacaoAdd()
+                        function confirmacaoAlt()
                         {
-                             alert('Produto adicionado com sucesso');
+                             alert('Produto alterado com sucesso');
                         }
                     </script>
                 </form>

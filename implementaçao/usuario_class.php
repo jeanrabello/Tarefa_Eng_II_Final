@@ -20,10 +20,7 @@
                 echo "<script>alert('Os dados inseridos são inválidos');</script>";
             }
         }
-
-        function realizarCompra(){
-            
-        }
+        
     }
 
 ?>

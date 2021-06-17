@@ -23,6 +23,14 @@
             <button class="dropbtn"><img src="./Img/usuario.svg" /></button>
             <div class="menu__usuario-conteudo">
                 <a href="#">Meu Perfil       </a>
+                <a href="gerirprodutos.php">Gerir Produtos    </a>
+                <a href="" onclick="relatorio()">Gerar Relatório   </a>
+                <script>
+                    function relatorio() {
+                        alert('<?php  unserialize($_SESSION['usuarioAdmin'])->gerarRelatorio() ?>');
+                    }
+                </script>
+
                 <a href="login.php" onclick="logout()">Logout   </a>
                 <script>
                     function logout() {
