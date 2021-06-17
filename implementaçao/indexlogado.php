@@ -15,7 +15,7 @@
         <div class="Principal">
             <div class="cabecalho">
                 <?php
-                    include 'cabecalho.php';
+                    include 'cabecalhologado.php';
                 ?>
             </div>
 
