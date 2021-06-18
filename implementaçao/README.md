@@ -20,5 +20,15 @@ Para executar o código se faz necessário o uso do programa **XAMPP**.
     ![URL](https://github.com/jeanrabello/Tarefa_Eng_II_Final/blob/main/implementaçao/Img/IMG_README/localhost.png)
 
 **5º passo:**
-    Por fim, selecione a pasta **"implementaçao"**.             
+    Selecione a pasta **"implementaçao"**.             
     ![Index](https://github.com/jeanrabello/Tarefa_Eng_II_Final/blob/main/implementaçao/Img/IMG_README/index.png)
+
+## Observação:
+Existem 2 usuários para efetuar o login, sendo eles:
+
+1. **ADMINISTRADOR**:
+    - admin@admin.com
+    - Admin123
+2. **USUÁRIO COMUM**:
+    - usuario@comum.com
+    - User123
